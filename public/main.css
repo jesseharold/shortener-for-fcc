@@ -4,3 +4,10 @@
     max-width: 760px;
     margin: 0 auto;
 }
+
+code {
+    display: block;
+    padding: 5px;
+    background-color: #c7d6f2;
+    color: darkblue;
+}

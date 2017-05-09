@@ -6,7 +6,8 @@ const PORT = process.env.PORT || 8080;
 
 // **** connect to Mongo DB **** 
 const mongoose = require('mongoose');
-const url = 'mongodb://localhost:27017/learning';
+const url = 'mongodb://heroku_02jk3kxx:6d5gjer9jiiv5pvflvn3ide2l8@ds133251.mlab.com:33251/heroku_02jk3kxx';
+//const url = 'mongodb://localhost:27017/learning';
 mongoose.connect(url);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -37,7 +38,7 @@ db.once('open', function() {
                 const newAlias = new Redirect({ name: alias, url: req.params[0]});
                 newAlias.save(function (err, newRedirect) {
                     if (err) return console.error(err);
-                    res.send("Redirect created successfully: " + alias);
+                    res.send({ "original_url": req.params[0], "short_url": "https://lil-lnk.herokuapp.com/" + alias });
                 });
             } else {
                 res.send("That is not a valid URL starting with http: " + req.params[0]);

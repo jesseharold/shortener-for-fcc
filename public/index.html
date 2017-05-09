@@ -7,25 +7,31 @@
   </head>
   <body>
       <div class="container">
-      <h1>FreeCodeCamp API Project: <br>URL Shortener Microservice</h1>
-      <h2>User stories:</h2>
-      <ul>
-        <li>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</li>
-        <li>When I visit that shortened URL, it will redirect me to my original link.</li>
-      </ul>
-      <h3>Example creation usage:</h3>
-      <p>
-https://little-url.herokuapp.com/new/https://www.google.com
-        </p>
-      <h3>Example creation output:</h3>
-      <p>
-{ "original_url":"http://foo.com:80", "short_url":"https://little-url.herokuapp.com/8170" }
-</p>
-      <h3>Usage:</h3>
-      <p>
-https://little-url.herokuapp.com/2871<br>
-Will redirect to:<br>
-https://www.google.com/<br>
+        <h1>FreeCodeCamp API Project: <br>URL Shortener Microservice</h1>
+        <h2>User stories:</h2>
+        <ul>
+          <li>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</li>
+          <li>When I visit that shortened URL, it will redirect me to my original link.</li>
+        </ul>
+
+        <h3>Example creation:</h3>
+        <code>
+        https://little-url.herokuapp.com/new/https://www.google.com
+        </code>
+
+        <h3>Example creation output:</h3>
+        <code>
+        { "original_url":"http://foo.com:80", "short_url":"https://little-url.herokuapp.com/8170" }
+        </code>
+
+        <h3>Example Usage:</h3>
+        <code>
+        https://little-url.herokuapp.com/2871
+        </code>
+        Will redirect to:
+        <code>
+        https://www.google.com/
+        </code>
       </div>
   </body>
 </html>
