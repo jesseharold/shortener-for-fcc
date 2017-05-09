@@ -1,0 +1,24 @@
+{
+  "name": "urlshortener",
+  "version": "1.0.0",
+  "description": "URL shortener",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesseharold/shortener-for-fcc.git"
+  },
+  "author": "jesseharold@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesseharold/shortener-for-fcc/issues"
+  },
+  "homepage": "https://github.com/jesseharold/shortener-for-fcc#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "mongodb": "^2.2.25",
+    "mongoose": "^4.9.8"
+  }
+}
