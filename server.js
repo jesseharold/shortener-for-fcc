@@ -4,11 +4,6 @@ var path = require('path');
 app.use(express.static('public'));
 const PORT = process.env.PORT || 8080;
 
-let dummyData = {
-    "1234": "http://google.com",
-    "0123": "http://bing.com"
-};
-
 // **** connect to Mongo DB **** 
 const mongoose = require('mongoose');
 const url = 'mongodb://localhost:27017/learning';
@@ -59,11 +54,12 @@ db.once('open', function() {
             if(result.length === 0){
                 res.send("redirect not found: " + req.params["urlAlias"]);
             } else {
+                // record found! perform redirect
+                // this would be a good place to call a logging function
                 res.redirect(result[0].url);
             }
         });
     });
-
 
     // **** START THE SERVER ****
 
